@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = [
+    "openai",
+]
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+authors = ["gents83 <gents83@gmail.com>"]
+repository = "https://github.com/gents83/ai-rs"
+keywords = ["ai", "rust", "openai"]
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+openai_api_rust = "0.1.8"
+
