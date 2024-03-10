@@ -25,8 +25,6 @@ const SAMPLE_LEN: usize = 10000;
 const REPEAT_PENALTY: f32 = 1.1;
 const REPEAT_LAST_N: usize = 64;
 
-const DEFAULT_PROMPT: &str = "Ciao. Io sono Mauro e tu?";
-
 fn main() {
     let mut start = std::time::Instant::now();
 
