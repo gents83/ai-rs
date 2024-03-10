@@ -52,7 +52,11 @@ fn main() {
 
                     start = std::time::Instant::now();
                     let device = Device::cuda_if_available(0).unwrap();
-                    let dtype = DType::F32;
+                    let dtype = if device.is_cuda() {
+                        DType::BF16
+                    } else {
+                        DType::F32
+                    };
 
                     let vb = unsafe {
                         VarBuilder::from_mmaped_safetensors(&filenames, dtype, &device).unwrap()
