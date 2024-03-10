@@ -8,9 +8,9 @@
 
 use std::io::Write;
 
-use candle::{hf_retrieve, load_safetensors, token::TokenOutputStream};
 use candle_core::{DType, Device, Tensor};
 use candle_nn::VarBuilder;
+use candle_rs::{hf_retrieve, load_safetensors, token::TokenOutputStream};
 use tokenizers::Tokenizer;
 
 use candle_transformers::{generation::LogitsProcessor, models::llama as model};

@@ -1,6 +1,6 @@
 
 ## Quickstart
-A crate to test AI, starting from OpenAI
+A crate to test AI with Rust, starting from OpenAI, Candle (LLama and Gemma) and Burn
 
 ## License
 Licensed under either of

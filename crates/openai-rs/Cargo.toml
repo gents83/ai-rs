@@ -1,0 +1,11 @@
+[package]
+name = "openai-rs"
+edition.workspace = true
+version.workspace = true
+authors.workspace = true
+repository.workspace = true
+keywords.workspace = true
+license.workspace = true
+
+[dependencies]
+openai_api_rust = { workspace = true }

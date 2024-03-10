@@ -1,8 +1,8 @@
 use std::fs::File;
 
-use candle::{hf_retrieve, load_safetensors};
 use candle_core::{DType, Device};
 use candle_nn::VarBuilder;
+use candle_rs::{hf_retrieve, load_safetensors};
 use candle_transformers::models::gemma::{Config, Model};
 use hf_hub::{api::sync::ApiBuilder, Repo, RepoType};
 use tokenizers::Tokenizer;

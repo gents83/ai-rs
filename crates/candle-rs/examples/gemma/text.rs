@@ -1,5 +1,5 @@
-use candle::token::TokenOutputStream;
 use candle_core::{DType, Device, Tensor};
+use candle_rs::token::TokenOutputStream;
 use candle_transformers::{generation::LogitsProcessor, models::gemma::Model};
 use tokenizers::Tokenizer;
 

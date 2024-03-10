@@ -1,8 +1,9 @@
 [workspace]
 resolver = "2"
 members = [
-    "candle",
-    "openai",
+    "burn-rs",
+    "candle-rs",
+    "openai-rs",
 ]
 
 [workspace.package]
@@ -19,6 +20,8 @@ hf-hub = { version = "0.3.0", features = ["tokio"] }
 tokenizers = { version = "0.15.2", features = ["onig"] }
 #OpenAI
 openai_api_rust = "0.1.8"
+#Burn
+burn = { version = "0.12.1", features = ["wgpu"] }
 #Candle
 candle-core = { version = "0.4.1", features = ["cuda"]}
 candle-transformers = { version = "0.4.1", features = ["cuda"] }
