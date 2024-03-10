@@ -21,8 +21,8 @@ tokenizers = { version = "0.15.2", features = ["onig"] }
 openai_api_rust = "0.1.8"
 #Candle
 candle-core = { version = "0.4.1", features = ["cuda"]}
-candle-transformers = { version = "0.4.1" }
-candle-nn = { version = "0.4.1" }
+candle-transformers = { version = "0.4.1", features = ["cuda"] }
+candle-nn = { version = "0.4.1", features = ["cuda"] }
 tracing-chrome = "0.7.1"
 tracing-subscriber = "0.3.7"
 #Others

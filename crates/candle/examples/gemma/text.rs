@@ -55,13 +55,11 @@ impl TextGeneration {
             }
         }
 
-        let sample_count = tokens.len().min(sample_len);
-
         println!("\nanswer:");
         let mut generated_tokens = 0usize;
         if let Some(eos_token) = self.tokenizer.get_token(EOS_TOKEN) {
             let start_gen = std::time::Instant::now();
-            for index in 0..sample_count {
+            for index in 0..sample_len {
                 let context_size = if index > 0 { 1 } else { tokens.len() };
                 let start_pos = tokens.len().saturating_sub(context_size);
                 let ctxt = &tokens[start_pos..];
