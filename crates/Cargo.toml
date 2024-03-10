@@ -1,6 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
+    "candle",
     "openai",
 ]
 
@@ -13,5 +14,17 @@ keywords = ["ai", "rust", "openai"]
 license = "MIT OR Apache-2.0"
 
 [workspace.dependencies]
+#HuggingFace
+hf-hub = { version = "0.3.0", features = ["tokio"] }
+tokenizers = { version = "0.15.2", features = ["onig"] }
+#OpenAI
 openai_api_rust = "0.1.8"
-
+#Candle
+candle-core = { version = "0.4.1", features = ["cuda"]}
+candle-transformers = { version = "0.4.1" }
+candle-nn = { version = "0.4.1" }
+tracing-chrome = "0.7.1"
+tracing-subscriber = "0.3.7"
+#Others
+anyhow = { version = "1", features = ["backtrace"] }
+serde_json = "1.0.99"

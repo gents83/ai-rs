@@ -1,0 +1,4 @@
+[env]
+CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG = "true"
+RUST_BACKTRACE = "full" 
+RUST_LOG = "info"
