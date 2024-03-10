@@ -22,10 +22,10 @@ const SEED: u64 = 299792458;
 const TEMPERATURE: f64 = 1_f64;
 const TOP_P: f64 = 0_f64;
 const SAMPLE_LEN: usize = 10000;
-const REPEAT_PENALTY: f32 = 1.;
+const REPEAT_PENALTY: f32 = 1.1;
 const REPEAT_LAST_N: usize = 64;
 
-const DEFAULT_PROMPT: &str = "Hello! What's your name?";
+const DEFAULT_PROMPT: &str = "Ciao. Io sono Mauro e tu?";
 
 fn main() {
     let mut start = std::time::Instant::now();

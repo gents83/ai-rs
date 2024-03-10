@@ -38,12 +38,11 @@ impl TextGeneration {
     }
 
     pub fn run(&mut self, prompt: &str, sample_len: usize) {
-        let closed_prompt = prompt.to_string() + EOS_TOKEN;
         self.tokenizer.clear();
         let mut tokens = self
             .tokenizer
             .tokenizer()
-            .encode(closed_prompt, true)
+            .encode(prompt, true)
             .unwrap()
             .get_ids()
             .to_vec();
