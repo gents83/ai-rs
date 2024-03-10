@@ -64,17 +64,25 @@ fn main() {
                     let model = Model::new(&config, vb).unwrap();
                     println!("loaded the model in {:?}", start.elapsed());
 
-                    let mut pipeline = TextGeneration::new(
-                        model,
-                        tokenizer,
-                        SEED,
-                        Some(TEMPERATURE),
-                        Some(TOP_P),
-                        REPEAT_PENALTY,
-                        REPEAT_LAST_N,
-                        &device,
-                    );
-                    pipeline.run(DEFAULT_PROMPT, SAMPLE_LEN);
+                    let prompts = vec![
+                        "What's the sum of 2 and 2?",
+                        "Is the square root of 16 equal to power of 2?",
+                        "Which is more performant? Rust o C++?",
+                    ];
+                    for prompt in prompts {
+                        let mut pipeline = TextGeneration::new(
+                            model.clone(),
+                            tokenizer.clone(),
+                            SEED,
+                            Some(TEMPERATURE),
+                            Some(TOP_P),
+                            REPEAT_PENALTY,
+                            REPEAT_LAST_N,
+                            &device,
+                        );
+                        pipeline.run(prompt, SAMPLE_LEN);
+                    }
+                    //pipeline.run(DEFAULT_PROMPT, SAMPLE_LEN);
                 } else {
                     println!("failed to load config");
                 }
